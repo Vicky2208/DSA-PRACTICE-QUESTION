@@ -4,6 +4,7 @@ public class PalinArray {
 
     public static void main(String args[]) {
         int a[] = { 222, 333, 555, 777 };
+        int m;
         int n = a.length;
         palinArray(a, n);
     }
