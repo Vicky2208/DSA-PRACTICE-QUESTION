@@ -11,13 +11,13 @@ public class TotalPathInMaze {
         int row = sc.nextInt();
         int column = sc.nextInt();
         System.out.println("The total no of paths to get " + row + " and " + column + " Position is :->> "
-                + permutationOfString(0, 0, row, column));
+                + totalPathinMaze(0, 0, row, column));
         sc.close();
 
     }
 
     // Recursion Approach //
-    public static int permutationOfString(int i, int j, int row, int column) {
+    public static int totalPathinMaze(int i, int j, int row, int column) {
 
         if (i == row - 1 && j == column - 1) {
             return 1;
@@ -26,8 +26,8 @@ public class TotalPathInMaze {
             return 0;
 
         }
-        int downPath = permutationOfString(i + 1, j, row, column);
-        int rightPath = permutationOfString(i, j + 1, row, column);
+        int downPath = totalPathinMaze(i + 1, j, row, column);
+        int rightPath = totalPathinMaze(i, j + 1, row, column);
         return downPath + rightPath;
 
     }

@@ -12,18 +12,18 @@ public class ReverseString {
         int i = sb.length() - 1;
         // System.out.println(Enter The)
         System.out.print("\n The Reverse Of " + n + " is :->> ");
-        KeypadCombination(n, sb, i);
+        reverseString(n, sb, i);
         sc.close();
 
     }
 
     // Recursion Approach //
-    public static void KeypadCombination(String n, StringBuilder sb, int i) {
+    public static void reverseString(String n, StringBuilder sb, int i) {
         if (i < 0) {
             return;
         }
         System.out.print(sb.charAt(i));
-
+        reverseString(n, sb, i - 1);
     }
 
 }

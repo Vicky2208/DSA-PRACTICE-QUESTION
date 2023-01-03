@@ -29,9 +29,10 @@ public class FirstandLast {
         if (sb.charAt(i) == s) {
             if (first == -1) {
                 first = i;
-            } else {
-                last = i;
             }
+        }
+        if (first != -1) {
+            last += 1;
         }
         firstandLast(n, s, sb, i + 1);
 

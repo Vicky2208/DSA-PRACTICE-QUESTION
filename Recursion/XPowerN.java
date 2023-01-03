@@ -8,7 +8,7 @@ public class XPowerN {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = 5;
+        int x = 1;
         System.out.println("Enter The" + x + " To the power of number ");
         int n = sc.nextInt();
         int res = 1;

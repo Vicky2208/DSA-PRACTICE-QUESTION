@@ -9,15 +9,14 @@ public class InviteNPeople {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter The No of People in Party");
         int n = sc.nextInt();
-        int count = 0;
         System.out.println("The total no of Ways to Participate  " + n + " Guests in single or in pairs is "
-                + CallGuest(n, count));
+                + CallGuest(n));
         sc.close();
 
     }
 
     // Recursion Approach //
-    public static int CallGuest(int n, int count) {
+    public static int CallGuest(int n) {
         if (n == 1 || n == 2) {
             return n;
         }
@@ -25,9 +24,9 @@ public class InviteNPeople {
             return 1;
         }
         // Way 1
-        int Way1 = CallGuest(n - 1, count);
+        int Way1 = CallGuest(n - 1);
         // Way 2
-        int Way2 = (n - 1) * CallGuest(n - 2, count);
+        int Way2 = (n - 1) * CallGuest(n - 2);
 
         return Way1 + Way2;
 

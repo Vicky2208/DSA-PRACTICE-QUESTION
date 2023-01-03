@@ -30,8 +30,7 @@ public class SubsetOfNumbers {
 
     }
 
-    public static void generateSubsets(int idx, int[] Set, List<Integer> curr,
-            List<List<Integer>> result) {
+    public static void generateSubsets(int idx, int[] Set, List<Integer> curr, List<List<Integer>> result) {
         result.add(new ArrayList<>(curr)); // []
 
         for (int i = idx; i < Set.length; i++) {
